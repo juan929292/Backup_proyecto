@@ -1,0 +1,304 @@
+/*
+
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-bottom: 20px;
+    font: 81.25% "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #C7D8E8;
+    background: #272B46;
+}
+
+
+h1 {
+    padding-top: 30px;
+    width: 390px;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 52px;
+    text-align: center;
+    color: #F6F6DE;
+}
+
+h1 a, h1 a:hover {
+    text-decoration: none;
+    font-weight: normal;
+    color: blue;
+}
+
+p {
+    padding: 8px 0;
+    line-height: 1.4em;
+    text-align: justify;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: underline;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+	color: blue;
+}
+
+ul {
+    list-style: none;
+}
+
+/* page */
+
+#page {
+    position: relative;
+    margin: 0 auto;
+    width: 950px;
+	height: auto;
+	    overflow: auto;
+}
+
+
+}
+
+/* menu */
+
+#menu {
+    position: absolute;
+    top: 30px;
+    left: 390px;
+    width: 560px;
+    height: 52px;
+    background: #1B2024 url(../../img/menu.jpg) no-repeat;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 11px 0;
+}
+
+#menu ul li {
+    margin: 0 0 0 11px;
+    padding: 0;
+    display: block;
+    float: left;
+}
+
+#menu ul li a {
+    display: block;
+    float: left;
+    width: 126px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-decoration: none;
+    color: #FCFFFF;
+}
+
+ #menu ul li a:hover {
+    text-decoration: none;
+    color: blue;
+    background: #F5E6A0 url(../img/menuover.gif) no-repeat;
+}
+
+/* intro */
+
+#header {
+	height: 200px;
+	background: #B0D9F9 url(../img/cabecera2.jpg) no-repeat;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#login{
+	height:200px;
+	width:230px;
+	background: #B0D9F9;
+	color: blue;
+	text-shadow: 3px 3px 3px grey;
+	}
+#login h4{
+	color: black;
+
+	}
+	#login *{
+	margin-left: 5px;
+	font-size: 15px;
+	}
+
+#intro h2 {
+    padding: 40px 0 10px 0;
+    font-weight: normal;
+    font-size: 36px;
+    color: #272B46;
+}
+
+#intro p {
+    padding-right: 50px;
+    font-size: 16px;
+    line-height: 21px;
+    color: #6570B6;
+}
+
+/* main */
+
+#main {
+    background-color:#4625A9;
+	height:auto; 
+	width:950px;
+	overflow: auto;
+
+}
+#contenido {
+	
+    background: ;
+	height:auto; 
+	width:720px;
+	 display:table-cell;
+	 vertical-align:top;
+
+
+
+}
+#titu {
+	padding:10px 10px 10px 10px;
+}
+.cajas{
+		float:left;
+		margin: 10px 10px 10px 10px;
+
+}
+
+/* sidebar */
+
+#sidebar {
+
+	float:left;
+    width: 180px;
+    background: url(../img/sidebarr.jpg)repeat-y;
+	height: auto;
+	padding-left:20px;	
+}
+#sidebaraso {
+     display:table-cell;
+    width: 230px;
+    background: url(../img/sidebarr.jpg)repeat-y;
+	height: auto;
+	
+	
+}
+
+
+#sidebar h2 {
+    font-weight: normal;
+    font-size: 24px;
+    color: #6791B8;
+}
+
+#sidebar ul {
+    padding: 16px 0;
+}
+
+#sidebar ul li {
+    padding: 3px 0;
+}
+
+#sidebar ul li a {
+    display: block;
+    padding: 0 0 0 18px;
+    font-weight: normal;
+    line-height: 1.4em;
+    text-decoration: none;
+    color: #EB8400;
+    background: url(../img/claqueta1.png) no-repeat 0 3px;
+}
+
+#sidebar ul li a:hover {
+    text-decoration: none;
+    color: blue;
+}
+
+
+#sidebar p {
+    color: #70748D;
+}
+
+/*#fondo */
+
+#fondo {
+    float: right;
+    width: 566px;
+    padding: 20px 40px 20px 40px;
+    background: url(../img/fondo.jpg) no-repeat;
+}
+
+
+#fondo h2 {
+    font-weight: normal;
+    font-size: 28px;
+    color: #98B8D5;
+}
+
+#fondo h2 a, #fondo h2 a:hover {
+    font-weight: normal;
+    text-decoration: none;
+    color: blue;
+}
+
+
+#fondo ul {
+    padding: 8px 0;
+}
+
+#fondo ul li {
+    padding: 0 0 0 18px;
+    line-height: 1.4em;
+    text-align: justify;
+    background: url(../img/li2.gif) no-repeat 0 3px;
+}
+#fondo img {
+    float: right;
+    display: block;
+    margin: 0 0 10px 40px;
+    border: 4px solid #585C7B;
+}
+
+
+/* footer */
+
+#footer {
+    height:auto;
+	width:950px;
+}
+
+
+#footerleft {
+    float: left;
+    width: 230px;
+	height: auto;
+	padding-left:30px;
+    background: #AECAE0;
+}
+
+#footerleft p {
+    text-align: center;
+    color: #646883;
+}
+
+#footerright {
+    float: right;
+    width: 720px;
+	height: 40px;
+    background: #4C5070 url(../img/content.jpg) repeat-y;
+}
+#footerright p {
+    padding-left:20px;
+}
