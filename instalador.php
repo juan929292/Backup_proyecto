@@ -10,9 +10,14 @@
   </head>
   <body style="background-color:darkred; ">
 
-	<div style="width:1000px;margin: 0 auto;margin-top:41px;">
-		<div>
-			<h1 style="margin-left:25px;margin-bottom:25px;color:white;text-decoration: underline;">Instalador Aplicación Web</h1>
+	<div style="width:1000px;margin: 0 auto;margin-top:1%;">
+		<div class='form-group col-lg-10'>
+			<h2 style="margin-left:15px;margin-bottom:15px;color:white;text-decoration: underline;">Instalador Aplicación Web</h2>
+			<div class="form-group" >
+					<?php
+					include('server_information.php');
+					?>
+			</div>
 		</div>
 			  
 		<div class='form-group col-lg-5'>
@@ -50,7 +55,7 @@
 		
 		<div class="form-group col-lg-10" style="height:auto;">
 			<div class="form-group" >
-				<h4 style="color:white;">Nombre de la nueva Base de datos</h4>
+				<h4 style="color:white;">Nombre de la nueva Base de datos:</h4>
 				<input type="text" name="newbd" class="form-control input-lg" placeholder="Nombre de la nueva BD" required>
 			</div>
 		</div>
@@ -66,6 +71,7 @@
               $password=$_POST["pass"];
               $bd=$_POST["formbd"];
 			  $host=$_POST["formhost"];
+			  $newbd=$_POST["newbd"];
 			  $connection= new mysqli($host, $usuario, $password, $bd);
               if ($connection->connect_errno) {
                    printf("Connection failed: %s\n", $connection->connect_error);
@@ -93,9 +99,9 @@
                   $templine = '';
 				  $file_nombre=explode(".sql", $filename);
 //				  $text="create database if not exists `".$file_nombre[0]."`;"."\n"."use `".$file_nombre[0]."`;"."\n"."--"; 
-				  $text2="create database if not exists `".$_POST["newbd"]."`;"."\n"."use `".$_POST["newbd"]."`;"."\n"."--";
+				  $text2="\n"."create database if not exists `".$newbd."`;"."\n"."use `".$newbd."`;"."\n"."\n"."--";
 				  $file3 = fopen($filename, "r+");
-				  fwrite($file3, $text);
+					fwrite($file3, $text2);
 				  fclose($file3);
                   // Read in entire file
                   $lines = file($filename);
@@ -116,14 +122,12 @@
                   }
                    echo "Base de datos completa importada correctamente";
 				   
-			    
-//				include('database.php');
 				$file = fopen("db_configuration.php", "w");
 					fwrite($file, "<?php"."\n");
 					fwrite($file, "$"."db_user="."'".$usuario."';"."\n");
 					fwrite($file, "$"."db_password="."'".$password."';"."\n");
 					fwrite($file, "$"."db_host="."'".$host."';"."\n");
-					fwrite($file, "$"."db_name="."'".$bd."';"."\n");
+					fwrite($file, "$"."db_name="."'".$newbd."';"."\n");
 					fwrite($file, "?>"."\n");
 				fclose($file);
 				$file2 = fopen("../index.php", "w");
@@ -139,11 +143,10 @@
 				else{
 					echo "error al copiar $fichero...\n";
 				}
-
-
-             unlink("instalador.php");
-			 unlink($filename);
-			 unlink("favicon.ico");
+				unlink("instalador.php");
+				unlink($filename);
+				unlink("favicon.ico");
+				unlink("server_information.php");
 
                 header('Location:index.php');
               }
